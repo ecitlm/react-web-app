@@ -28,11 +28,11 @@ class News extends React.Component {
       <div className='test'>
         test 路由页面
         <Router>
-          <ul>
-            <li><Link to="/news">news</Link></li>
-            <li><Link to="/test">test</Link></li>
-            <li onClick={this.linkUrl}>事件路由跳转</li>
-          </ul>
+          <div>
+            <p className="link"><Link to="/news">news</Link></p>
+            <p className="link"><Link to="/test">test</Link></p>
+            <p onClick={this.linkUrl} className="link">事件路由跳转</p>
+          </div >
         </Router>
 
       </div>
