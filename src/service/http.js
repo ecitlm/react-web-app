@@ -2,7 +2,7 @@ import axios from 'axios'
 // qs模块,用于处理URL查询参数 Querystring
 import qs from 'qs'
 let instance = axios.create({
-  timeout: 60 * 1000,
+  timeout: 60 * 1000
   // baseURL: process.env.VUE_APP_BASE_URL
 })
 console.log(instance)
@@ -18,28 +18,28 @@ instance.interceptors.request.use(config => {
 const httpRequest = (url, data = {}) => {
   return new Promise((resolve, reject) => {
     instance.post(url, data)
-    .then(res => {
-      resolve(res.data)
-    })
-    .catch(err => {
-      console.log(err)
-      alert('网络请求异常')
-      reject(err)
-    })
+      .then(res => {
+        resolve(res.data)
+      })
+      .catch(err => {
+        console.log(err)
+        alert('网络请求异常')
+        reject(err)
+      })
   })
 }
 
 const httpQuery = (url, data = {}) => {
   return new Promise((resolve, reject) => {
     instance.get(url, qs.stringify(data))
-    .then(res => {
-      resolve(res.data)
-    })
-    .catch(err => {
-      console.log(err)
-      alert('网络请求异常!')
-      reject(err)
-    })
+      .then(res => {
+        resolve(res.data)
+      })
+      .catch(err => {
+        console.log(err)
+        alert('网络请求异常!')
+        reject(err)
+      })
   })
 }
 export default {
