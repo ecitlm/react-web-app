@@ -46,4 +46,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 
 ### 说明
-> 文件打包封装、px2rem
+> 文件打包封装、px2rem、axios、routers
